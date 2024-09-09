@@ -1,0 +1,5 @@
+pass http any any <> $HOME_NET 8081 (msg:"Default Ingress 8081 pass";sid:1;)
+pass ssh any any <> any 22 (msg:"Default ssh Ingress from outside pass";sid:2;)
+pass http $HOME_NET any <> any 80 (msg:"Default http 80 Engress pass";sid:3;)
+pass http $HOME_NET any <> any 443 (msg:"Default http 443 Engress pass";sid:4;)
+drop http any any -> $HOME_NET any (msg:"Default Ingress block";sid:5;)
