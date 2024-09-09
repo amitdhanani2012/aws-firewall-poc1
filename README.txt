@@ -27,6 +27,6 @@ So, when you get load balancer output after terraform apply complete (like lb_dn
 
 then lb_dns:8081 will work and lb_dns:8080 will be blocked
 
-You can get publci IP of ec2 instance from AWS console and can do ssh
+You can get public IP of ec2 instance from AWS console and can do ssh
 
 This POC can be enhanced by more automation in subnet configuration/other configurartion but, for now its just for IDEA that how it works. Here I took one VPC but we can expand to more than one VPC
