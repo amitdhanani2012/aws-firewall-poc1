@@ -20,7 +20,7 @@ https://aws.amazon.com/blogs/networking-and-content-delivery/deployment-models-f
 
 8. In my POC I also allowed incoming traffic for port 22(ssh), 8081(http).I also allowed outgoing http traffic from instance to port 80,443. Default rule policy starts checking rules in the order of pass,drop,reject,alert (DEFAULT_ACTION_ORDER rule_order). There is drop rule to drop other traffic on http. Here firewalling totally depends on rules according to suricata rule group.
 
-NOTE: suricata rules has priority field to give priority to some rules over other rules. Suricata rules are majority used to block malicious packets as IPC. It can also work as IDS alerts instead blocking. Port blocking is just simple POC
+NOTE: suricata rules has priority field to give priority to some rules over other rules. Suricata rules are majority used to block malicious packets as IPS. It can also work as IDS alerts instead blocking. Port blocking is just simple POC
 
 
 So, when you get load balancer output after terraform apply complete (like lb_dns = "my-alb-pub-xxx.us-west-2.elb.amazonaws.com")
