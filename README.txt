@@ -16,7 +16,7 @@ https://aws.amazon.com/blogs/networking-and-content-delivery/deployment-models-f
 
 6. public subnet routes to firewall endpoints and firewall endpoints route to internet gateway
 
-7. Ingress traffic for "load balancer/public ip of instance" route to firewall vi IGWRT route table, IGWRT route has route to forward ingress traffic to firewall endpoint.
+7. Ingress traffic for "load balancer/public ip of instance" route to firewall via IGWRT route table, IGWRT route has route to forward ingress traffic to firewall endpoint.
 
 8. In my POC I also allowed incoming traffic for port 22(ssh), 8081(http).I also allowed outgoing http traffic from instance to port 80,443. Default rule policy starts checking rules in the order of pass,drop,reject,alert (DEFAULT_ACTION_ORDER rule_order). There is drop rule to drop other traffic on http. Here firewalling totally depends on rules according to suricata rule group.
 
